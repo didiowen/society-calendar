@@ -33,9 +33,9 @@ AI：skill 建好了，37 筆活動已同步到 Google Calendar ✓
 | 學會 | Skill | 活動數 | 特性 |
 |------|-------|--------|------|
 | 🩸 [血液病學會](https://www.hematology.org.tw) | `/hematology-event` | 37 | Bootstrap table，全年活動 |
-| 🎗️ [癌症醫學會](https://www.taiwanoncologysociety.org.tw) | `/oncology-event` | 14 | POST 分頁，民國年，SSL 壞掉 |
+| 🧬 [癌症醫學會](https://www.taiwanoncologysociety.org.tw) | `/oncology-event` | 14 | POST 分頁，民國年，SSL 壞掉 |
 | 🏥 [內科醫學會](https://www.tsim.org.tw) | `/tsim-event` | 2 | 日期嵌在標題中，SSL 壞掉 |
-| 🧬 [愛滋病學會](https://www.aids-care.org.tw) | `/aids-event` | 月度活動 | 詳細頁需 session cookie，可自訂過濾 |
+| 🎗️ [愛滋病學會](https://www.aids-care.org.tw) | `/aids-event` | 月度活動 | 詳細頁需 session cookie，可自訂過濾 |
 | 🦠 [感染症醫學會](https://www.idsroc.org.tw) | `/idsroc-event` | 國內外研討會 | PDF 課程表，多分頁，可自訂過濾 |
 
 ---
