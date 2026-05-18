@@ -35,6 +35,8 @@ AI：skill 建好了，37 筆活動已同步到 Google Calendar ✓
 | 🩸 [血液病學會](https://www.hematology.org.tw) | `/hematology-event` | 37 | Bootstrap table，全年活動 |
 | 🎗️ [癌症醫學會](https://www.taiwanoncologysociety.org.tw) | `/oncology-event` | 14 | POST 分頁，民國年，SSL 壞掉 |
 | 🏥 [內科醫學會](https://www.tsim.org.tw) | `/tsim-event` | 2 | 日期嵌在標題中，SSL 壞掉 |
+| 🧬 [愛滋病學會](https://www.aids-care.org.tw) | `/aids-event` | 月度活動 | 詳細頁需 session cookie，可自訂過濾 |
+| 🦠 [感染症醫學會](https://www.idsroc.org.tw) | `/idsroc-event` | 國內外研討會 | PDF 課程表，多分頁，可自訂過濾 |
 
 ---
 
@@ -51,7 +53,20 @@ python3 fetch_oncology_events.py
 
 # 內科醫學會（近期 2 筆）
 python3 fetch_tsim_events.py
+
+# 愛滋病學會（含過濾，產生 ICS）
+cd .claude/skills/aids-event
+python3 scripts/fetch_aids_events.py   # 抓取 → events.json（未過濾）
+python3 scripts/generate_ics.py        # 套用過濾 → events.ics
+
+# 感染症醫學會（含過濾，產生 ICS）
+cd .claude/skills/idsroc-event
+python3 scripts/fetch_idsroc_events.py
+python3 scripts/generate_ics.py
 ```
+
+> `aids-event` 與 `idsroc-event` 採用 fetch / generate 兩階段：抓取後可在 `generate_ics.py`
+> 最上方的 `LOCATION_KEYWORDS` 與 `MIN_CREDITS` 兩個常數調整過濾規則，不必重新連線抓資料。
 
 ### 2. 同步到 Google Calendar
 
@@ -61,7 +76,12 @@ python3 fetch_tsim_events.py
 /hematology-event    # 同步血液病學會
 /oncology-event      # 同步癌症醫學會
 /tsim-event          # 同步內科醫學會
+/aids-event          # 抓取愛滋病學會 → 產生過濾後的 ICS
+/idsroc-event        # 抓取感染症醫學會 → 產生過濾後的 ICS
 ```
+
+> `aids-event` 與 `idsroc-event` 產出 `events.ics`，可選擇匯入 Google Calendar
+> （Settings → Import & export → Import）或透過 Google Calendar MCP 逐筆建立事件。
 
 ### 3. 新增學會
 
@@ -154,10 +174,16 @@ society-calendar/
     │   ├── SKILL.md
     │   ├── scripts/
     │   └── references/
-    └── tsim-event/              # 內科醫學會 skill
+    ├── tsim-event/              # 內科醫學會 skill
+    │   ├── SKILL.md
+    │   ├── scripts/
+    │   └── references/
+    ├── aids-event/              # 愛滋病學會 skill（含 ICS 過濾）
+    │   ├── SKILL.md
+    │   └── scripts/             # fetch_aids_events.py + generate_ics.py
+    └── idsroc-event/            # 感染症醫學會 skill（含 ICS 過濾）
         ├── SKILL.md
-        ├── scripts/
-        └── references/
+        └── scripts/             # fetch_idsroc_events.py + generate_ics.py
 ```
 
 ---
