@@ -2,6 +2,8 @@
 
 > 用 AI 自動抓取台灣醫學會行事曆，一鍵同步到 Google Calendar
 
+_Originally created by [htlin222](https://github.com/htlin222/society-calendar)._
+
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill%20Based-blueviolet?logo=anthropic)](https://claude.ai/claude-code)
