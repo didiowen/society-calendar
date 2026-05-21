@@ -21,13 +21,27 @@ def load_events():
         return json.load(f)
 
 
+_TIME_PREFIX_RE = re.compile(r"^\s*\d{1,2}:\d{2}\s*[~\-－～]\s*\d{1,2}:\d{2}\s*")
+
+
+def _norm_title(t):
+    """Normalise a TBMT title for dedup: drop a leading time-range prefix and a
+    leading 'TBMT' org tag, so e.g. '12:00~14:00 TBMT理監事會' and '理監事會'
+    collapse to the same key."""
+    t = _TIME_PREFIX_RE.sub("", t or "")
+    t = re.sub(r"^TBMT\s*", "", t)
+    return t.strip()
+
+
 def dedup(events):
-    """Drop duplicate TBMT events (same title + start date), keeping the
-    entry with the richer location/description. The TBMT site sometimes lists
-    the same event twice under different detail-page IDs."""
+    """Drop duplicate TBMT events, keeping the entry with the richer
+    location/description. The TBMT site sometimes lists the same event twice
+    under different detail-page IDs and slightly different titles. Two events
+    collapse when they share start date + time range + normalised title."""
     best = {}
     for e in events:
-        key = (e.get("full_title") or e.get("title", ""), e.get("date", ""))
+        title = e.get("full_title") or e.get("title", "")
+        key = (e.get("date", ""), e.get("time_range", ""), _norm_title(title))
         score = len(e.get("location", "") or "") + len(e.get("description", "") or "")
         if key not in best or score > best[key][1]:
             best[key] = (e, score)
