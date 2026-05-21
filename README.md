@@ -7,7 +7,7 @@ _Originally created by [htlin222](https://github.com/htlin222/society-calendar).
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill%20Based-blueviolet?logo=anthropic)](https://claude.ai/claude-code)
-[![Google Calendar](https://img.shields.io/badge/Google%20Calendar-MCP%20Sync-4285F4?logo=google-calendar&logoColor=white)](#workflow)
+[![Google Calendar](https://img.shields.io/badge/Google%20Calendar-ICS%20%2F%20MCP-4285F4?logo=google-calendar&logoColor=white)](#兩種使用方式擇一)
 [![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero_(stdlib_only)-brightgreen)](#tech-stack)
 [![Made in Taiwan](https://img.shields.io/badge/Made%20in-Taiwan%20%F0%9F%87%B9%F0%9F%87%BC-red)](https://github.com/htlin222/society-calendar)
 
@@ -15,75 +15,91 @@ _Originally created by [htlin222](https://github.com/htlin222/society-calendar).
 
 ## 為什麼需要這個？
 
-身為醫師，每個月要追蹤 3-5 個學會的繼續教育活動、研討會、年會。每個學會網站長得不一樣，有些用民國年，有些有 CAPTCHA，有些 SSL 壞掉。
+身為醫師，每個月要追蹤好幾個學會的繼續教育活動、研討會、年會。每個學會網站長得不一樣，有些用民國年，有些有 CAPTCHA，有些 SSL 壞掉。
 
 **手動做法**：逐一開學會網站 → 翻頁找活動 → 手動建 Google Calendar 事件 → 每月重複
 
-**自動化做法**：給 Claude Code 一個 URL → 自動探索、抓取、建立日曆事件
+**自動化做法**：給 Claude Code 一個 URL → 自動探索、抓取、產生 `.ics` 或直接建立日曆事件
 
 ```
 你：/distill-events https://www.hematology.org.tw/...
 AI：找到 37 筆活動，要建立 skill 嗎？
 你：好
-AI：skill 建好了，37 筆活動已同步到 Google Calendar ✓
+AI：skill 建好了，活動已同步 ✓
 ```
+
+---
+
+## 兩種使用方式（擇一）
+
+抓取後，每個學會都會產生一份 `.ics`。你可以**訂閱檔案**，或讓 **Claude Code 直接寫入** Google Calendar。
+
+### 方式 A — 訂閱 `.ics`（最簡單，任何行事曆 App 皆可）
+
+`.ics` 檔發佈於 [`ics/`](ics/)，唯讀、零設定、自動更新：
+
+| 學會 | 訂閱網址（Google Calendar → 其他日曆 → 透過網址加入） |
+|------|------|
+| 🦠 感染症 | `https://raw.githubusercontent.com/didiowen/society-calendar/main/ics/idsroc-events.ics` |
+| 🩸 血液病 | `https://raw.githubusercontent.com/didiowen/society-calendar/main/ics/hematology-events.ics` |
+| 🎗️ 愛滋病 | `https://raw.githubusercontent.com/didiowen/society-calendar/main/ics/aids-events.ics` |
+| 🦴 骨髓移植 | `https://raw.githubusercontent.com/didiowen/society-calendar/main/ics/tbmt-events.ics` |
+
+### 方式 B — 透過 Google Calendar MCP 直接寫入
+
+搭配 Claude Code + Google Calendar MCP，將過濾後的活動以 `create_event` 直接寫入你指定的日曆（依「標題＋開始日期」去重，可重複執行而不重複建立）。可自訂日曆、可加學會標籤（`[感染症]`/`[血液病]`/`[愛滋]`/`[骨髓移植]`），但需授權連接器具備 **Google Calendar 寫入權限**。
+
+> **差異**：訂閱 `.ics` 唯讀、自動更新、零設定；MCP 寫入可自訂、可分類，但需寫入授權。
 
 ---
 
 ## 目前支援的學會
 
-| 學會 | Skill | 活動數 | 特性 |
-|------|-------|--------|------|
-| 🩸 [血液病學會](https://www.hematology.org.tw) | `/hematology-event` | 37 | Bootstrap table，全年活動 |
-| 🧬 [癌症醫學會](https://www.taiwanoncologysociety.org.tw) | `/oncology-event` | 14 | POST 分頁，民國年，SSL 壞掉 |
-| 🏥 [內科醫學會](https://www.tsim.org.tw) | `/tsim-event` | 2 | 日期嵌在標題中，SSL 壞掉 |
-| 🎗️ [愛滋病學會](https://www.aids-care.org.tw) | `/aids-event` | 月度活動 | 詳細頁需 session cookie，可自訂過濾 |
-| 🦠 [感染症醫學會](https://www.idsroc.org.tw) | `/idsroc-event` | 國內外研討會 | PDF 課程表，多分頁，可自訂過濾 |
+| 學會 | Skill | 產出 | 特性 |
+|------|-------|------|------|
+| 🩸 [血液病學會](https://www.hematology.org.tw) | `/hematology-event` | `.ics`（過濾） | Bootstrap table，全年活動 |
+| 🦠 [感染症醫學會](https://www.idsroc.org.tw) | `/idsroc-event` | `.ics`（過濾） | PDF 課程表，多分頁，可自訂過濾 |
+| 🎗️ [愛滋病學會](https://www.aids-care.org.tw) | `/aids-event` | `.ics`（過濾） | 詳細頁需 session cookie，可自訂過濾 |
+| 🦴 [骨髓移植學會 (TBMT)](https://www.tbmt.org.tw) | `/tbmt-event` | `.ics`（去重） | FullCalendar JSON API，certifi SSL，自動去重 |
+| 🧬 [癌症醫學會](https://www.taiwanoncologysociety.org.tw) | `/oncology-event` | JSON | POST 分頁，民國年，SSL 壞掉 |
+| 🏥 [內科醫學會](https://www.tsim.org.tw) | `/tsim-event` | JSON | 日期嵌在標題中，SSL 壞掉 |
 
 ---
 
 ## 快速開始
 
-### 1. 抓取活動
+### 1. 抓取活動 → 產生 `.ics`
+
+`hematology` / `idsroc` / `aids` / `tbmt` 皆採 **fetch → generate_ics** 兩階段：
 
 ```bash
-# 血液病學會（全年 37 筆）
-python3 fetch_events.py
+# 血液病學會（過濾）
+cd .claude/skills/hematology-event
+python3 scripts/fetch_events.py
+python3 scripts/generate_ics.py
 
-# 癌症醫學會（近期 14 筆）
-python3 fetch_oncology_events.py
-
-# 內科醫學會（近期 2 筆）
-python3 fetch_tsim_events.py
-
-# 愛滋病學會（含過濾，產生 ICS）
-cd .claude/skills/aids-event
-python3 scripts/fetch_aids_events.py   # 抓取 → events.json（未過濾）
-python3 scripts/generate_ics.py        # 套用過濾 → events.ics
-
-# 感染症醫學會（含過濾，產生 ICS）
+# 感染症醫學會（過濾）
 cd .claude/skills/idsroc-event
 python3 scripts/fetch_idsroc_events.py
 python3 scripts/generate_ics.py
+
+# 愛滋病學會（過濾）
+cd .claude/skills/aids-event
+python3 scripts/fetch_aids_events.py
+python3 scripts/generate_ics.py
+
+# 骨髓移植學會（去重）
+cd .claude/skills/tbmt-event
+python3 scripts/fetch_tbmt_events.py
+python3 scripts/generate_ics.py
 ```
 
-> `aids-event` 與 `idsroc-event` 採用 fetch / generate 兩階段：抓取後可在 `generate_ics.py`
-> 最上方的 `LOCATION_KEYWORDS` 與 `MIN_CREDITS` 兩個常數調整過濾規則，不必重新連線抓資料。
+> 過濾型（aids / idsroc / hematology）可在各自 `generate_ics.py` 最上方的關鍵字／學分常數調整規則，不必重新連線。TBMT 不過濾，但會依「日期＋時段＋正規化標題」自動去重（學會網站偶爾以不同 detail ID 重複列出同一活動）。
 
 ### 2. 同步到 Google Calendar
 
-在 Claude Code 中使用對應的 skill：
-
-```
-/hematology-event    # 同步血液病學會
-/oncology-event      # 同步癌症醫學會
-/tsim-event          # 同步內科醫學會
-/aids-event          # 抓取愛滋病學會 → 產生過濾後的 ICS
-/idsroc-event        # 抓取感染症醫學會 → 產生過濾後的 ICS
-```
-
-> `aids-event` 與 `idsroc-event` 產出 `events.ics`，可選擇匯入 Google Calendar
-> （Settings → Import & export → Import）或透過 Google Calendar MCP 逐筆建立事件。
+- **訂閱**：見上方〔方式 A〕，貼上 `ics/` 的 raw 網址。
+- **MCP 寫入**：在 Claude Code 中執行對應 skill（`/hematology-event` 等），或解析 `.ics` 後以 `create_event` 寫入。
 
 ### 3. 新增學會
 
@@ -93,46 +109,7 @@ python3 scripts/generate_ics.py
 /distill-events https://www.some-society.org.tw/events
 ```
 
-Claude 會自動：
-1. 找到行事曆頁面
-2. 分析 HTML 結構
-3. 建立 scraper 腳本
-4. 問你要不要建立 local skill
-5. 同步到 Google Calendar
-
----
-
-## Workflow
-
-```
-┌─────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-│  學會網站    │────▶│  fetch_*.py   │────▶│  *_events.json│────▶│ Google Cal   │
-│  (HTML)      │     │  (scraper)   │     │  (JSON)      │     │ (MCP sync)   │
-└─────────────┘     └──────────────┘     └──────────────┘     └──────────────┘
-       │                   │                    │                     │
-       │            ┌──────┴──────┐      ┌──────┴──────┐      ┌──────┴──────┐
-       │            │ listing page │      │ merge/dedup │      │ Study 📚    │
-       │            │ detail pages │      │ by event_id │      │ calendar    │
-       │            │ 0.3s delay   │      │ or URL      │      │ batch of 5  │
-       │            └─────────────┘      └─────────────┘      └─────────────┘
-       │
-  /distill-events
-  ┌────┴────┐
-  │ 7-step  │
-  │ workflow│
-  │ 自動探索 │
-  └─────────┘
-```
-
-### 定期同步
-
-Script 支援 **merge + dedup**，重複執行安全無虞：
-
-```bash
-# 每月跑一次，新活動自動 append
-python3 fetch_events.py           # "No new events found" or "Added 3 new events"
-python3 fetch_oncology_events.py  # 同上
-```
+Claude 會自動找到行事曆頁面、分析 HTML、建立 scraper、詢問是否打包成 skill。
 
 ---
 
@@ -141,15 +118,16 @@ python3 fetch_oncology_events.py  # 同上
 | 元件 | 技術 | 說明 |
 |------|------|------|
 | Scraper | Python 3 (stdlib) | `urllib` + `re`，零外部依賴 |
-| 日曆同步 | Google Calendar MCP | Claude Code 內建 MCP 工具 |
+| SSL | `certifi`（若可用） | TBMT 需驗證憑證；Windows 上以 certifi 憑證庫建立 context |
+| 日曆同步 | `.ics` 訂閱 / Google Calendar MCP | 二擇一 |
 | Skill 系統 | Claude Code Skills | `.claude/skills/` 結構化技能 |
-| 探索引擎 | `/distill-events` | 7 步驟自動化新學會流程 |
+| 探索引擎 | `/distill-events` | 自動化新學會流程 |
 
 ### 為什麼用 stdlib？
 
 - 醫院電腦通常不能 `pip install`
 - 零依賴 = 任何有 Python 3 的環境都能跑
-- `urllib` + `re` 處理這些簡單 HTML 綽綽有餘
+- `urllib` + `re` 處理這些簡單 HTML 綽綽有餘（`certifi` 為唯一選用相依，缺少時自動退回系統憑證庫）
 
 ---
 
@@ -157,35 +135,20 @@ python3 fetch_oncology_events.py  # 同上
 
 ```
 society-calendar/
-├── fetch_events.py              # 血液病學會 scraper
-├── fetch_oncology_events.py     # 癌症醫學會 scraper
-├── fetch_tsim_events.py         # 內科醫學會 scraper
-├── events.json                  # 血液病學會活動資料
-├── oncology_events.json         # 癌症醫學會活動資料
-├── tsim_events.json             # 內科醫學會活動資料
+├── ics/                         # 發佈的 .ics（可直接訂閱）
+│   ├── idsroc-events.ics
+│   ├── hematology-events.ics
+│   ├── aids-events.ics
+│   └── tbmt-events.ics
 ├── LICENSE                      # MIT
 └── .claude/skills/
     ├── distill-events/          # 通用探索 skill（給新學會用）
-    │   ├── SKILL.md
-    │   └── references/
-    ├── hematology-event/        # 血液病學會 skill
-    │   ├── SKILL.md
-    │   ├── scripts/
-    │   └── references/
-    ├── oncology-event/          # 癌症醫學會 skill
-    │   ├── SKILL.md
-    │   ├── scripts/
-    │   └── references/
-    ├── tsim-event/              # 內科醫學會 skill
-    │   ├── SKILL.md
-    │   ├── scripts/
-    │   └── references/
-    ├── aids-event/              # 愛滋病學會 skill（含 ICS 過濾）
-    │   ├── SKILL.md
-    │   └── scripts/             # fetch_aids_events.py + generate_ics.py
-    └── idsroc-event/            # 感染症醫學會 skill（含 ICS 過濾）
-        ├── SKILL.md
-        └── scripts/             # fetch_idsroc_events.py + generate_ics.py
+    ├── hematology-event/        # 血液病學會（fetch + generate_ics，過濾）
+    ├── idsroc-event/            # 感染症醫學會（fetch + generate_ics，過濾）
+    ├── aids-event/              # 愛滋病學會（fetch + generate_ics，過濾）
+    ├── tbmt-event/              # 骨髓移植學會（fetch + generate_ics，去重）
+    ├── oncology-event/          # 癌症醫學會（fetch → JSON）
+    └── tsim-event/              # 內科醫學會（fetch → JSON）
 ```
 
 ---
@@ -197,31 +160,21 @@ society-calendar/
 | 問題 | 解法 |
 |------|------|
 | HTTP 406 (User-Agent blocked) | 加 `Mozilla/5.0` header |
-| SSL 憑證壞掉 | `ssl.CERT_NONE` |
+| SSL 憑證壞掉 | `ssl.CERT_NONE`（AIDS）或 `certifi` 憑證庫（TBMT，Windows 相容、不停用驗證） |
+| Windows `cp950` 主控台崩潰 | 強制 UTF-8 stdout（`sys.stdout.reconfigure`） |
+| 同一活動重複列出（不同 detail ID） | `generate_ics.py` 依日期＋時段＋正規化標題去重 |
+| 列表頁日期 `YYYY/MM/DD` vs `YYYY-MM-DD` | 比對前統一正規化（修正 AIDS 抓到 0 筆的 bug） |
 | 民國年日期 `115/04/18` | `year + 1911` 轉換 |
 | POST 分頁 | 帶完整 hidden fields |
 | CAPTCHA 保護 | 改用其他頁面（如活動訊息） |
 | Word HTML 嵌入 | strip `<style>` blocks |
-| Footer 滲入內容 | 精準 regex 邊界 |
 | 日期嵌在標題中 | regex 從標題提取日期 |
 
 ---
 
-## 新增學會的開發流程
+## 更新紀錄
 
-```
-1. 給 URL → /distill-events https://...
-2. Claude 自動探索 HTML 結構
-3. 建立 scraper，測試並列出活動
-4. 詢問是否建立 skill
-5. 打包成 .claude/skills/{name}/
-6. 可選：同步到 Google Calendar
-```
-
-這個 workflow 已成功處理 3 個不同結構的網站，包含：
-- Bootstrap table（血液病學會）
-- Div blocks + POST pagination（癌症醫學會）
-- Simple `<li>` list + UUID detail pages（內科醫學會）
+最新釋出：**[v1.0.0](https://github.com/didiowen/society-calendar/releases/tag/v1.0.0)** — Windows 修復（cp950 / SSL）、AIDS 日期過濾修正、TBMT 去重，並提供 `.ics` 訂閱與 Google Calendar MCP 兩種使用方式。
 
 ---
 
