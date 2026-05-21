@@ -1,20 +1,14 @@
 #!/usr/bin/env python3
-"""Fetch upcoming events from 台灣愛滋病學會 (Taiwan AIDS Society).
+"""Fetch upcoming events from 台灣愛滋病學會 (Taiwan AIDS Society)."""
 
-Output: events.json (one level up from this script). Unfiltered — the filter
-lives in generate_ics.py so you can re-tune it without re-hitting the site.
-
-Run from the repo root or from anywhere — the script self-locates its output.
-"""
-
-import json
-import re
-import ssl
-import time
+import json, re, ssl, sys, time
 from datetime import date
-from http.cookiejar import CookieJar
 from pathlib import Path
-from urllib.request import Request, build_opener, HTTPCookieProcessor, HTTPSHandler
+from urllib.request import Request, urlopen, build_opener, HTTPCookieProcessor, HTTPSHandler
+from http.cookiejar import CookieJar
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 BASE_URL = "https://www.aids-care.org.tw"
 LIST_URL = f"{BASE_URL}/events/index.php"
@@ -25,12 +19,11 @@ CTX = ssl.create_default_context()
 CTX.check_hostname = False
 CTX.verify_mode = ssl.CERT_NONE
 
-
 def make_opener():
     jar = CookieJar()
     https_handler = HTTPSHandler(context=CTX)
-    return build_opener(HTTPCookieProcessor(jar), https_handler)
-
+    opener = build_opener(HTTPCookieProcessor(jar), https_handler)
+    return opener
 
 def fetch(opener, url, referer=None):
     headers = dict(HEADERS)
@@ -40,13 +33,8 @@ def fetch(opener, url, referer=None):
     with opener.open(req) as r:
         return r.read().decode("utf-8", errors="replace")
 
-
 def parse_list(html):
-    items = re.findall(
-        r'class="events-list__item">(.*?)(?=class="events-list__item"|class="paging)',
-        html,
-        re.S,
-    )
+    items = re.findall(r'class="events-list__item">(.*?)(?=class="events-list__item"|class="paging)', html, re.S)
     events = []
     for item in items:
         date_m  = re.search(r'<time[^>]*>([^<]+)</time>', item)
@@ -64,7 +52,6 @@ def parse_list(html):
             "credits": score_m.group(1).strip() if score_m else "",
         })
     return events
-
 
 def parse_detail(html):
     info = {}
@@ -95,28 +82,22 @@ def parse_detail(html):
         info["phone"] = phone_m.group(1).strip()
     return info
 
-
 def main():
     today = date.today().isoformat()
+
     opener = make_opener()
 
-    print(f"Fetching list from {LIST_URL} ...")
+    print(f"Fetching upcoming events (from {today})...")
     html = fetch(opener, LIST_URL)
     events = parse_list(html)
-    print(f"  Found {len(events)} events on list page")
+    # List-page dates are YYYY/MM/DD; normalise to ISO before comparing.
+    events = [e for e in events if e["date"].replace("/", "-") >= today]
+    print(f"Found {len(events)} upcoming events")
 
-    # Keep upcoming only (date >= today). Dates are 'YYYY-MM-DD' from the time tag.
-    events = [e for e in events if e["date"] >= today]
-    print(f"  Upcoming: {len(events)}")
-
-    # Cache by id from previous runs — skip detail fetch if we already have it.
     existing = {}
     if OUTPUT.exists():
-        try:
-            for e in json.loads(OUTPUT.read_text("utf-8")):
-                existing[e["id"]] = e
-        except Exception:
-            pass
+        for e in json.loads(OUTPUT.read_text("utf-8")):
+            existing[e["id"]] = e
 
     enriched = []
     for i, ev in enumerate(events, 1):
@@ -136,10 +117,8 @@ def main():
             print(f"ERR: {ex}")
         enriched.append(ev)
 
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(enriched, ensure_ascii=False, indent=2), "utf-8")
-    print(f"\nOK {len(enriched)} events written to {OUTPUT}")
-
+    print(f"\n✓ {len(enriched)} events written to {OUTPUT}")
 
 if __name__ == "__main__":
     main()
