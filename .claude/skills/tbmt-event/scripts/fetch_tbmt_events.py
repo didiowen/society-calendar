@@ -4,9 +4,20 @@
 import json
 import os
 import re
+import ssl
+import sys
 import time
 from datetime import datetime
 from urllib.request import Request, urlopen
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
+try:
+    import certifi
+    _SSL_CTX = ssl.create_default_context(cafile=certifi.where())
+except ImportError:
+    _SSL_CTX = ssl.create_default_context()
 
 BASE_URL = "https://www.tbmt.org.tw"
 CALENDAR_API = f"{BASE_URL}/publicUI/D/D10401.aspx"
@@ -16,7 +27,7 @@ OUTPUT = "tbmt_events.json"
 
 def fetch(url: str) -> str:
     req = Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urlopen(req) as resp:
+    with urlopen(req, context=_SSL_CTX) as resp:
         return resp.read().decode("utf-8")
 
 
@@ -141,7 +152,7 @@ def main():
     # Merge with existing file (dedup by event_id)
     existing = []
     if os.path.exists(OUTPUT):
-        with open(OUTPUT) as f:
+        with open(OUTPUT, encoding="utf-8") as f:
             existing = json.load(f)
 
     existing_ids = {e["event_id"] for e in existing}
