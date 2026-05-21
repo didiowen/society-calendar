@@ -94,7 +94,7 @@ python3 scripts/fetch_tbmt_events.py
 python3 scripts/generate_ics.py
 ```
 
-> 過濾型（aids / idsroc / hematology）可在各自 `generate_ics.py` 最上方的關鍵字／學分常數調整規則，不必重新連線。TBMT 不過濾，但會依「日期＋時段＋正規化標題」自動去重（學會網站偶爾以不同 detail ID 重複列出同一活動）。
+> 過濾型（aids / idsroc / hematology）的地點／學分過濾規則可自訂，詳見下方〔[自訂過濾規則](#自訂過濾規則)〕。TBMT 不套用過濾，但會依「日期＋時段＋正規化標題」自動去除重複列出的同一活動。
 
 ### 2. 同步到 Google Calendar
 
@@ -112,6 +112,27 @@ python3 scripts/generate_ics.py
 Claude 會自動找到行事曆頁面、分析 HTML、建立 scraper、詢問是否打包成 skill。
 
 ---
+
+## 自訂過濾規則
+
+`aids` / `idsroc` / `hematology` 在產生 `.ics` 時會套用**地點＋學分**過濾，邏輯都在各自的 `scripts/generate_ics.py`，三者規則相同：
+
+| 比對對象 | 條件 | 結果 |
+|----------|------|------|
+| `TAINAN_KW`（台南／臺南） | 命中 | 一律納入 |
+| `KAOHSIUNG_KW`（高雄／義大／嘉義） | 命中且學分 > 2 | 納入 |
+| 其他地區 | 學分 > 3 | 納入 |
+
+比對的文字是活動的「地點＋主辦單位」（`location + organizer`），學分取自 `credits` 欄位。
+
+**怎麼改**（編輯該 skill 的 `scripts/generate_ics.py`）：
+
+1. **改地點名單** — 修改檔案上方的 `TAINAN_KW` / `KAOHSIUNG_KW` 兩個 list，加入想「一律納入」或「低門檻納入」的關鍵字（地名或主辦單位皆可）。
+2. **改學分門檻** — 修改 `passes_filter()` 內的數字（預設 `> 2`、`> 3`）。
+3. **全部納入（不過濾）** — 讓 `passes_filter()` 直接 `return True`。
+4. 改完重跑 `python3 scripts/generate_ics.py` 即可，**不需重新抓資料**。
+
+> TBMT 不套用地點／學分過濾（收錄所有近期活動），僅自動去除重複列出的同一場活動。
 
 ## Tech Stack
 
