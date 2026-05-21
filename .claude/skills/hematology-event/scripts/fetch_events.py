@@ -8,6 +8,9 @@ import time
 from datetime import datetime, timezone
 from urllib.request import Request, urlopen
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
 URL = "https://www.hematology.org.tw/web2/project/index.php?act=tag_p"
 BASE_URL = "https://www.hematology.org.tw/web2/project/"
 OUTPUT = "events.json"
@@ -192,7 +195,7 @@ def main():
     import os
     existing = []
     if os.path.exists(OUTPUT):
-        with open(OUTPUT) as f:
+        with open(OUTPUT, encoding="utf-8") as f:
             existing = json.load(f)
 
     existing_urls = {e.get("url") for e in existing if e.get("url")}
