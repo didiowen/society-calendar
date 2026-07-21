@@ -15,43 +15,15 @@ TZNAME:CST
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:7c1e4b0f-ded9-5972-b63c-310781158677
-DTSTAMP:20260623T024844Z
-SUMMARY:傳染病核心醫院教育訓練課程
-LOCATION:台南市永康區中華路901號第五醫療大樓5F國際會議
- 廳
-DESCRIPTION:主辦單位：奇美醫療財團法人奇美醫院\n類別：B
- 類\n積分：2分\n費用：不收費\n學會頁面：https://www.idsroc.
- org.tw/active/side_info.asp?id=18637&side=in\n課程表：https://www.idsr
- oc.org.tw/DB/Edu/18637.pdf?v=2026623104836\n聯絡人：周光祺 ([email&
- #160\;protected])
-DTSTART;TZID=Asia/Taipei:20260626T093000
-DTEND;TZID=Asia/Taipei:20260626T123000
-END:VEVENT
-BEGIN:VEVENT
-UID:da1f677c-cb26-5e83-aa8f-85873c13c933
-DTSTAMP:20260623T024844Z
-SUMMARY:從疫情監測到群聚處置:關鍵能力養成一日研習會
-LOCATION:高雄醫學大學-勵學大樓-A1 階梯教室(高雄市三民區
- 十全一路100號)
-DESCRIPTION:主辦單位：社團法人台灣感染管制學會\n類別：B
- 類\n積分：3分\n費用：收費\n學會頁面：https://www.idsroc.org
- .tw/active/side_info.asp?id=18616&side=in\n課程表：https://www.idsroc.
- org.tw/DB/Edu/18616.pdf?v=2026623104834\n聯絡人：秘書處 ([email&#16
- 0\;protected])
-DTSTART;TZID=Asia/Taipei:20260627T085000
-DTEND;TZID=Asia/Taipei:20260627T165000
-END:VEVENT
-BEGIN:VEVENT
 UID:a69d9c1b-6eed-5d25-9b08-01c42b67ae59
-DTSTAMP:20260623T024844Z
+DTSTAMP:20260721T014330Z
 SUMMARY:115年度感染症流行病學講習班（含臨床試驗及疫苗
  ）
 LOCATION:台大醫學院2樓201講堂
 DESCRIPTION:主辦單位：感染症醫學會\n類別：A類\n積分：6分
  \n費用：收費\n學會頁面：https://www.idsroc.org.tw/active/side_in
  fo.asp?id=18662&side=in\n課程表：https://www.idsroc.org.tw/DB/Edu/1866
- 2.pdf?v=2026623104825\n聯絡人：岳薇 ([email&#160\;protected])
+ 2.pdf?v=202672194324\n聯絡人：岳薇 ([email&#160\;protected])
 DTSTART;TZID=Asia/Taipei:20260725T090000
 DTEND;TZID=Asia/Taipei:20260725T162000
 END:VEVENT
