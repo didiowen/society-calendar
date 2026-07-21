@@ -14,33 +14,4 @@ TZOFFSETTO:+0800
 TZNAME:CST
 END:STANDARD
 END:VTIMEZONE
-BEGIN:VEVENT
-UID:26d8e757-3d33-533a-b2c4-743bef680f24
-DTSTAMP:20260623T024919Z
-SUMMARY:2026年友善醫療及愛滋教育訓練課程(一)
-LOCATION:奇美醫療財團法人奇美醫院 第五醫療大樓 六 樓 56
- 1 會議室 （ 地址： 台南市永康區中華路 901 號）。
-DESCRIPTION:主辦單位：奇美醫療財團法人奇美醫院\n主講人
- ：杜漢祥醫師\n積分：2 學分\n費用：不收費\n學會頁面：
- https://www.aids-care.org.tw/events/content.php?id=2496&pageno=1&continue=
- Y\n課程表：https://www.aids-care.org.tw/upload/events/files/2496.doc?v
- =100725\n聯絡人：陳冠宇 06-2812811-53734
-DTSTART;TZID=Asia/Taipei:20260626T135000
-DTEND;TZID=Asia/Taipei:20260626T163000
-END:VEVENT
-BEGIN:VEVENT
-UID:2443968b-9756-575f-83f2-3de75385c4ec
-DTSTAMP:20260623T024919Z
-SUMMARY:2026 年【Chemsex藥愛】議題專業人員訓練_進階課程
-LOCATION:北市聯醫中興院區6樓第一會議室 （台北市大同區
- 鄭州路145號）
-DESCRIPTION:主辦單位：台灣同志諮詢熱線協會、中華民國台
- 灣懷愛協會、臺北市立聯合醫院昆明防治中心共同主辦\n
- 主講人：高智龍心理師等\n積分：6 學分\n費用：不收費\n
- 學會頁面：https://www.aids-care.org.tw/events/content.php?id=2519&pag
- eno=1&continue=Y\n課程表：https://www.aids-care.org.tw/upload/events/f
- iles/2519.pdf?v=142622\n聯絡人：許家瑋 0953771018
-DTSTART;TZID=Asia/Taipei:20260702T090000
-DTEND;TZID=Asia/Taipei:20260702T164000
-END:VEVENT
 END:VCALENDAR
