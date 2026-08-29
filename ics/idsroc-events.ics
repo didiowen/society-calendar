@@ -15,16 +15,58 @@ TZNAME:CST
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:a69d9c1b-6eed-5d25-9b08-01c42b67ae59
-DTSTAMP:20260721T014330Z
-SUMMARY:115年度感染症流行病學講習班（含臨床試驗及疫苗
- ）
-LOCATION:台大醫學院2樓201講堂
-DESCRIPTION:主辦單位：感染症醫學會\n類別：A類\n積分：6分
- \n費用：收費\n學會頁面：https://www.idsroc.org.tw/active/side_in
- fo.asp?id=18662&side=in\n課程表：https://www.idsroc.org.tw/DB/Edu/1866
- 2.pdf?v=202672194324\n聯絡人：岳薇 ([email&#160\;protected])
-DTSTART;TZID=Asia/Taipei:20260725T090000
-DTEND;TZID=Asia/Taipei:20260725T162000
+UID:cb3f9557-e0fc-5612-927b-a00065b4fdf8
+DTSTAMP:20260829T075507Z
+SUMMARY:2026年台灣醫學黴菌培訓網研討會
+LOCATION:台北市中山南路11號財團法人張榮發基金會國際會
+ 議中心10樓1001廰
+DESCRIPTION:主辦單位：台灣感染症醫學會 (The Infectious Disease
+  Society of Taiwan)\n協辦單位：輝瑞大藥廠 (Pfizer Inc. Taiwan)\n
+ 類別：A類\n積分：5分\n費用：不收費\n學會頁面：https://w
+ ww.idsroc.org.tw/active/side_info.asp?id=18741&side=in\n課程表：https:
+ //www.idsroc.org.tw/DB/Edu/18741.pdf?v=202682915557\n聯絡人：陳雅暉
+  ([email&#160\;protected])
+DTSTART;TZID=Asia/Taipei:20260829T090000
+DTEND;TZID=Asia/Taipei:20260830T120000
+END:VEVENT
+BEGIN:VEVENT
+UID:e3b39462-7c32-5dbd-aec9-5139d9ee76f5
+DTSTAMP:20260829T075507Z
+SUMMARY:115年嘉義市結核病防治教育訓練
+LOCATION:衛生福利部嘉義醫院嘉誼廳
+DESCRIPTION:主辦單位：衛生福利部嘉義醫院\n協辦單位：嘉
+ 義市政府衛生局\n類別：B類\n積分：3分\n費用：不收費\n
+ 學會頁面：https://www.idsroc.org.tw/active/side_info.asp?id=18738&sid
+ e=in\n聯絡人：陳如惠 ([email&#160\;protected])
+DTSTART;TZID=Asia/Taipei:20260911T085000
+DTEND;TZID=Asia/Taipei:20260911T161000
+END:VEVENT
+BEGIN:VEVENT
+UID:8754c492-9bd6-5872-a0ef-8472ab5ffff5
+DTSTAMP:20260829T075507Z
+SUMMARY:115年度愛滋病治療專業能力教育訓練研習班
+LOCATION:張榮發基金會國際會議中心 801廳
+DESCRIPTION:主辦單位：台灣感染症醫學會、台灣愛滋病學會
+ \n類別：A類\n積分：5分\n費用：收費\n學會頁面：https://ww
+ w.idsroc.org.tw/active/side_info.asp?id=18722&side=in\n課程表：https:/
+ /www.idsroc.org.tw/DB/Edu/18722.pdf?v=2026829155434\n聯絡人：周品君
+  ([email&#160\;protected])
+DTSTART;TZID=Asia/Taipei:20260919T090000
+DTEND;TZID=Asia/Taipei:20260920T122000
+END:VEVENT
+BEGIN:VEVENT
+UID:998da94c-8517-52c8-9efe-a689e44abbfc
+DTSTAMP:20260829T075507Z
+SUMMARY:國際抗細胞激素自體抗體共識高峰會：深耕跨領域
+ 醫學人才培訓與臨床指引
+LOCATION:台大兒童醫院 B1視聽講堂
+DESCRIPTION:主辦單位：國立臺灣大學醫學院、台大醫院內科
+ 部感染科、台灣感染症醫學會、台灣內科醫學會\n類別：
+ B類\n積分：5分\n費用：收費\n學會頁面：https://www.idsroc.or
+ g.tw/active/side_info.asp?id=18681&side=in\n課程表：https://www.idsroc
+ .org.tw/DB/Edu/18681.pdf?v=2026829155433\n聯絡人：陳小姐 ([email&#1
+ 60\;protected])
+DTSTART;TZID=Asia/Taipei:20260919T130000
+DTEND;TZID=Asia/Taipei:20260920T173500
 END:VEVENT
 END:VCALENDAR
