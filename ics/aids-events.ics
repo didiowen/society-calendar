@@ -14,4 +14,32 @@ TZOFFSETTO:+0800
 TZNAME:CST
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:94a52042-15f8-5273-9869-ece340a0f702
+DTSTAMP:20260829T075549Z
+SUMMARY:HIV照護新視野-非感染科醫護人員培力課程
+LOCATION:高雄市立凱旋醫院三樓凱旋廳  (高雄市苓雅區凱旋
+ 二路130號3樓)
+DESCRIPTION:主辦單位：中華民國台灣懷愛協會\n主講人：林
+ 錫勳 醫師等\n積分：6 學分\n費用：不收費\n學會頁面：ht
+ tps://www.aids-care.org.tw/events/content.php?id=2558&pageno=1&continue=Y\
+ n課程表：https://www.aids-care.org.tw/upload/events/files/2558.pdf?v=1
+ 70458\n聯絡人：許家瑋 0953771018
+DTSTART;TZID=Asia/Taipei:20260904T090000
+DTEND;TZID=Asia/Taipei:20260904T164000
+END:VEVENT
+BEGIN:VEVENT
+UID:ff41f4bf-81ea-5ecd-8cc2-8ed326bece60
+DTSTAMP:20260829T075549Z
+SUMMARY:HIV照護新視野-非感染科醫護人員培力課程
+LOCATION:臺北市立聯合醫院中興院區六樓第一會議室 （臺
+ 北市大同區鄭州路 145 號 ）
+DESCRIPTION:主辦單位：中華民國台灣懷愛協會\n主講人：楊
+ 家瑞  醫師等\n積分：6 學分\n費用：不收費\n學會頁面：h
+ ttps://www.aids-care.org.tw/events/content.php?id=2559&pageno=1&continue=Y
+ \n課程表：https://www.aids-care.org.tw/upload/events/files/2559.pdf?v=
+ 170522\n聯絡人：許家瑋 0953771018
+DTSTART;TZID=Asia/Taipei:20260917T090000
+DTEND;TZID=Asia/Taipei:20260917T164000
+END:VEVENT
 END:VCALENDAR
