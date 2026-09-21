@@ -16,7 +16,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9d892d7c-aded-509a-a649-4b1039354af9
-DTSTAMP:20260829T075536Z
+DTSTAMP:20260921T000056Z
 SUMMARY:115 年專科醫師複習班
 LOCATION:台大景福館1樓講堂
 DESCRIPTION:主辦單位：血液病學會\n分類：甲類\n積分：7\n
@@ -41,7 +41,7 @@ DTEND;TZID=Asia/Taipei:20260523T173000
 END:VEVENT
 BEGIN:VEVENT
 UID:d598c62f-5dda-5578-84d4-58786d9b4b00
-DTSTAMP:20260829T075536Z
+DTSTAMP:20260921T000056Z
 SUMMARY:Post-EHA(第2天)
 LOCATION:張榮發基金會國際會議中心1101會議廳
 DESCRIPTION:主辦單位：中華民國血液病學會\n分類：甲類\n
@@ -65,7 +65,7 @@ DTEND;TZID=Asia/Taipei:20260816T155500
 END:VEVENT
 BEGIN:VEVENT
 UID:5b514a32-f9ec-53f4-b797-2d66acc17cb7
-DTSTAMP:20260829T075536Z
+DTSTAMP:20260921T000056Z
 SUMMARY:HST-TBMT秋季會
 LOCATION:台中科博館
 DESCRIPTION:主辦單位：HST、TBMT、中榮\n分類：甲類\n積分：5
@@ -105,7 +105,7 @@ DTEND;TZID=Asia/Taipei:20260919T180000
 END:VEVENT
 BEGIN:VEVENT
 UID:7c0af37b-cae1-5db0-b661-7baf7a988946
-DTSTAMP:20260829T075536Z
+DTSTAMP:20260921T000056Z
 SUMMARY:HST-TBMT冬季會
 LOCATION:嘉義長庚紀念醫院
 DESCRIPTION:主辦單位：HST、TBMT、嘉長\n分類：甲類\n積分：5
@@ -144,8 +144,50 @@ DTSTART;TZID=Asia/Taipei:20261205T130000
 DTEND;TZID=Asia/Taipei:20261205T180000
 END:VEVENT
 BEGIN:VEVENT
+UID:330495d4-8439-5685-92d7-05b6f416f6e4
+DTSTAMP:20260921T000056Z
+SUMMARY:第2天：SOHO Asia 2027
+LOCATION:台北國際會議中心(TICC)
+DESCRIPTION:主辦單位：HST、SOHO\n分類：甲類\n積分：6\n學會
+ 頁面：https://www.hematology.org.tw/web2/project/index.php?act=point&id
+ =2994\n\n--- 相關連結 ---\nhttps://www.sohoasia2027.org/index.php：ht
+ tps://www.sohoasia2027.org/index.php\n\n--- 報名/節目表 ---\nPost-ASH
+ 改為與美國SOHO (Society of Hematologic Oncology)合辦「SOHO Asia 20
+ 27」，謹訂於116年1月8日(星期五)至1月10日(星期日)假台北
+ 國際會議中心(TICC)舉行。\n自即日起開放投稿及註冊，敬
+ 邀踴躍報名參加。身分別點選「HST會員」於12月15日前報
+ 名，享免註冊費之優惠。逾12月15日報名者，一律須繳交
+ 註冊費 。\n大會官網： https://www.sohoasia2027.org/index.php\n投
+ 稿：2026/9/15~2026/11/23止\n註冊報名：2026/9/5~2026/12/15止\n教
+ 育積分：3日會議各別個別簽到，各別給予教育積分認定
+ 。1/8(五)甲類3分；1/9(六)甲類6分；1/10(日)甲類6分。
+DTSTART;TZID=Asia/Taipei:20270109T080000
+DTEND;TZID=Asia/Taipei:20270109T180000
+END:VEVENT
+BEGIN:VEVENT
+UID:5a76f0e8-b192-505d-bd25-70ce6d184609
+DTSTAMP:20260921T000056Z
+SUMMARY:第3天：SOHO Asia 2027
+LOCATION:台北國際會議中心(TICC)
+DESCRIPTION:主辦單位：HST、SOHO\n分類：甲類\n積分：6\n學會
+ 頁面：https://www.hematology.org.tw/web2/project/index.php?act=point&id
+ =2995\n\n--- 相關連結 ---\nhttps://www.sohoasia2027.org/index.php：ht
+ tps://www.sohoasia2027.org/index.php\n\n--- 報名/節目表 ---\nPost-ASH
+ 改為與美國SOHO (Society of Hematologic Oncology)合辦「SOHO Asia 20
+ 27」，謹訂於116年1月8日(星期五)至1月10日(星期日)假台北
+ 國際會議中心(TICC)舉行。\n自即日起開放投稿及註冊，敬
+ 邀踴躍報名參加。身分別點選「HST會員」於12月15日前報
+ 名，享免註冊費之優惠。逾12月15日報名者，一律須繳交
+ 註冊費 。\n大會官網： https://www.sohoasia2027.org/index.php\n投
+ 稿：2026/9/15~2026/11/23止\n註冊報名：2026/9/5~2026/12/15止\n教
+ 育積分：3日會議各別個別簽到，各別給予教育積分認定
+ 。1/8(五)甲類3分；1/9(六)甲類6分；1/10(日)甲類6分。
+DTSTART;TZID=Asia/Taipei:20270110T080000
+DTEND;TZID=Asia/Taipei:20270110T181500
+END:VEVENT
+BEGIN:VEVENT
 UID:326a8e06-1ced-5ddd-b87e-2f4b74758408
-DTSTAMP:20260829T075536Z
+DTSTAMP:20260921T000056Z
 SUMMARY:HST-TBMT年會
 DESCRIPTION:主辦單位：HST、TBMT\n分類：甲類\n積分：15\n學會
  頁面：https://www.hematology.org.tw/web2/project/index.php?act=point&id
@@ -177,5 +219,83 @@ DESCRIPTION:主辦單位：HST、TBMT\n分類：甲類\n積分：15\n學會
  符合參賽資格之作品。
 DTSTART;VALUE=DATE:20270424
 DTEND;VALUE=DATE:20270426
+END:VEVENT
+BEGIN:VEVENT
+UID:ac1214a0-6022-5586-bc38-ce91418fe867
+DTSTAMP:20260921T000056Z
+SUMMARY:HST-TBMT秋季會
+LOCATION:成大
+DESCRIPTION:主辦單位：HST、TBMT、成大\n分類：甲類\n積分：5
+ \n學會頁面：https://www.hematology.org.tw/web2/project/index.php?act=
+ point&id=2987\n\n--- 相關連結 ---\n採線上投稿(請點此連結投
+ 稿)：http://www.hematology.org.tw/web2/project/index.php?act=member_page
+ \n\n--- 報名/節目表 ---\n116年度HST-TBMT季會訂於2027年9月25
+ 日及11月20日舉行，同步開放徵稿，敬邀會員踴躍上網投
+ 稿。\n鑒於兩場會議時間有限，為利節目內容規劃，擬投
+ 稿者請於2027年7月25日前完成線上投稿。逾期系統將自動
+ 關閉，恕無法受理。\n一、會議時間及地點：\n【秋季會
+ 】2027年9月25日，假成大醫院舉行（季會會長：成大醫院
+ 陳彩雲主任）\n【冬季會】2027年11月20日，假中山附醫舉
+ 行（季會會長：中山附醫呂學儒主任）\n二、投稿受理原
+ 則（依115年度學術委員會議決議）：\n1. 投稿者或作者群
+ 中，至少須有一位為本會會員。\n2. 臨床試驗研究須符合
+ 下列條件之一：\n（1）投稿者與作者群中至少一位本會
+ 會員。\n（2）臨床試驗研究須包含台灣病患，或由台灣
+ 醫師擔任計畫主持人（Principal Investigator\, PI），或有台
+ 灣醫療機構參與。\n（3）若研究未有台灣團隊參與，投
+ 稿內容須為尚未發表之原著研究，且不得為已發表研究
+ 之 Encore 摘要。\n三、徵稿期間：\n至2027年7月25日止。逾
+ 期系統將自動關閉，恕無法上傳投稿。\n四、投稿方式：
+ \n採線上投稿(請點此連結投稿) 。首次登入者，帳號為「
+ 身分證字號」，密碼為「學會會員編號」。\n[註]會員投
+ 稿後，請務必於「年會季會投稿編輯區」自行確認是否
+ 有投稿成功，詳請附件投稿流程。截稿後，恕不再受理
+ 額外未於投稿系統完成投稿作業之稿件。\n五、投稿格式
+ 說明：\n• 內文字數限450字以內\n• 投稿時可另再附圖(
+ 單一panel)或表至多3個，以1頁word檔為限，超出1頁，所附
+ 之圖表作廢，不予以列入。\n• 圖表請另行Email至：hema04
+ 121553@gmail.com\n六、發表形式：\n季會投稿一律為口頭報告
+ ，無壁報展示。
+DTSTART;TZID=Asia/Taipei:20270925T130000
+DTEND;TZID=Asia/Taipei:20270925T180000
+END:VEVENT
+BEGIN:VEVENT
+UID:fbf167bf-b0c0-576f-87e2-13d16c263934
+DTSTAMP:20260921T000056Z
+SUMMARY:HST-TBMT冬季會
+LOCATION:中山附醫
+DESCRIPTION:主辦單位：HST、TBMT、中山附醫\n分類：甲類\n積
+ 分：5\n學會頁面：https://www.hematology.org.tw/web2/project/index.p
+ hp?act=point&id=2988\n\n--- 相關連結 ---\n採線上投稿(請點此連
+ 結投稿)：http://www.hematology.org.tw/web2/project/index.php?act=membe
+ r_page\n\n--- 報名/節目表 ---\n116年度HST-TBMT季會訂於2027年9
+ 月25日及11月20日舉行，同步開放徵稿，敬邀會員踴躍上
+ 網投稿。\n鑒於兩場會議時間有限，為利節目內容規劃，
+ 擬投稿者請於2027年7月25日前完成線上投稿。逾期系統將
+ 自動關閉，恕無法受理。\n一、會議時間及地點：\n【秋
+ 季會】2027年9月25日，假成大醫院舉行（季會會長：成大
+ 醫院陳彩雲主任）\n【冬季會】2027年11月20日，假中山附
+ 醫舉行（季會會長：中山附醫呂學儒主任）\n二、投稿受
+ 理原則（依115年度學術委員會議決議）：\n1. 投稿者或作
+ 者群中，至少須有一位為本會會員。\n2. 臨床試驗研究須
+ 符合下列條件之一：\n（1）投稿者與作者群中至少一位
+ 本會會員。\n（2）臨床試驗研究須包含台灣病患，或由
+ 台灣醫師擔任計畫主持人（Principal Investigator\, PI），或
+ 有台灣醫療機構參與。\n（3）若研究未有台灣團隊參與
+ ，投稿內容須為尚未發表之原著研究，且不得為已發表
+ 研究之 Encore 摘要。\n三、徵稿期間：\n至2027年7月25日止
+ 。逾期系統將自動關閉，恕無法上傳投稿。\n四、投稿方
+ 式：\n採線上投稿(請點此連結投稿) 。首次登入者，帳號
+ 為「身分證字號」，密碼為「學會會員編號」。\n[註]會
+ 員投稿後，請務必於「年會季會投稿編輯區」自行確認
+ 是否有投稿成功，詳請附件投稿流程。截稿後，恕不再
+ 受理額外未於投稿系統完成投稿作業之稿件。\n五、投稿
+ 格式說明：\n• 內文字數限450字以內\n• 投稿時可另再
+ 附圖(單一panel)或表至多3個，以1頁word檔為限，超出1頁，
+ 所附之圖表作廢，不予以列入。\n• 圖表請另行Email至：
+ hema04121553@gmail.com\n六、發表形式：\n季會投稿一律為口頭
+ 報告，無壁報展示。
+DTSTART;TZID=Asia/Taipei:20271120T130000
+DTEND;TZID=Asia/Taipei:20271120T180000
 END:VEVENT
 END:VCALENDAR
