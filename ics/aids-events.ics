@@ -14,4 +14,17 @@ TZOFFSETTO:+0800
 TZNAME:CST
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:f0a2c60a-a7c1-5d61-9bcb-f990435b79a2
+DTSTAMP:20261021T150117Z
+SUMMARY:第八屆亞太區藥愛國際會議 Day1
+LOCATION:高雄展覽館
+DESCRIPTION:主辦單位：社團法人台灣新滋識同盟\n主講人：A
+ dam Bourne 教授\n積分：6 學分\n學會頁面：https://www.aids-care
+ .org.tw/events/content.php?id=2575&pageno=1&continue=Y\n課程表：https:
+ //www.aids-care.org.tw/upload/events/files/2575.pdf?v=162819\n聯絡人：
+ 孫娜俐 03-3699721
+DTSTART;TZID=Asia/Taipei:20261028T090000
+DTEND;TZID=Asia/Taipei:20261028T174500
+END:VEVENT
 END:VCALENDAR
