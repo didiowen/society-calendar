@@ -16,7 +16,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9d892d7c-aded-509a-a649-4b1039354af9
-DTSTAMP:20260921T000056Z
+DTSTAMP:20261021T150104Z
 SUMMARY:115 年專科醫師複習班
 LOCATION:台大景福館1樓講堂
 DESCRIPTION:主辦單位：血液病學會\n分類：甲類\n積分：7\n
@@ -41,7 +41,7 @@ DTEND;TZID=Asia/Taipei:20260523T173000
 END:VEVENT
 BEGIN:VEVENT
 UID:d598c62f-5dda-5578-84d4-58786d9b4b00
-DTSTAMP:20260921T000056Z
+DTSTAMP:20261021T150104Z
 SUMMARY:Post-EHA(第2天)
 LOCATION:張榮發基金會國際會議中心1101會議廳
 DESCRIPTION:主辦單位：中華民國血液病學會\n分類：甲類\n
@@ -65,7 +65,7 @@ DTEND;TZID=Asia/Taipei:20260816T155500
 END:VEVENT
 BEGIN:VEVENT
 UID:5b514a32-f9ec-53f4-b797-2d66acc17cb7
-DTSTAMP:20260921T000056Z
+DTSTAMP:20261021T150104Z
 SUMMARY:HST-TBMT秋季會
 LOCATION:台中科博館
 DESCRIPTION:主辦單位：HST、TBMT、中榮\n分類：甲類\n積分：5
@@ -104,8 +104,141 @@ DTSTART;TZID=Asia/Taipei:20260919T130000
 DTEND;TZID=Asia/Taipei:20260919T180000
 END:VEVENT
 BEGIN:VEVENT
+UID:470f263f-983e-5d12-a88f-0afcaf9d0a36
+DTSTAMP:20261021T150104Z
+SUMMARY:臺灣兒科醫學會第268屆學術演講會
+LOCATION:成大醫學院(成杏校區)(Google Map地址請定位:台南市
+ 北區小東路53號)
+DESCRIPTION:主辦單位：臺灣兒科醫學會\n分類：丙類\n積分
+ ：0.35\n學會頁面：https://www.hematology.org.tw/web2/project/index.p
+ hp?act=point&id=3000\n\n--- 報名/節目表 ---\n臺灣兒科醫學會第
+ 268屆學術演講會\n時間\n編號\n論文題目與作者 / 單位\n14:
+ 20~14:27\n52.\n接受第一線 Blinatumomab 治療之高風險兒童B細
+ 胞急性淋巴性白血病患者感染性併發症的經驗分析\n王奕
+ 倫、張從彥、蕭翌雯²、溫玉娟²、陳世翔、江東和\n林
+ 口長庚紀念醫院：兒童血液腫瘤科、護理部²\n14:27~14:34\n
+ 53.\n兒童青少年低惡性度淋巴瘤之臨床特徵與預後-單一
+ 中心研究\n劉家益、楊媛甯、陳建旭、張孔昭²、鄭兆能
+ ³\n國立成功大學醫學院附設醫院兒科部；國立成功大學
+ 醫學院附設醫院病理部²；國立成功大學醫學院小兒科³\
+ n14:34~14:41\n54.\n惡化或復發的兒童膠質母細胞瘤的新治療
+ 策略：單一機構之經驗\n黃心柔、陳世翔¹²、王奕倫¹²
+ 、吳杰才³、高偉恆、曾振淦⁴、魏國珍、張從彥、江東
+ 和¹²\n林口長庚紀念醫院兒童內科部、林口長庚紀念醫
+ 院兒童血液腫瘤科²、林口長庚紀念醫院腦神經外科³、
+ 林口長庚紀念醫院放射腫瘤科⁴\n14:41~14:48\n55.\n兒童、青
+ 少年與青壯年骨肉瘤標靶治療之真實世界使用經驗：單
+ 一醫學中心回顧\n王存孝¹、顏秀如¹²、洪君儀¹²、侯
+ 明欣、謝心耘¹²、郭庭宇¹²、李致穎¹²\n臺北榮民總醫
+ 院兒童醫學部、兒童醫學部血液腫瘤科²\n14:48~14:55\n56.\n
+ 建立兒童橫紋肌肉瘤病人來源與細胞株來源異種移植模
+ 型作為臨床前治療研究平台\n劉兆能¹、葉庭吉、劉希哲
+ 、侯人尹、梁慕理²\n馬偕兒童醫院兒童血液腫瘤科；馬
+ 偕紀念醫院神經外科²\n14:55~15:02\n57.\n兒童非免疫性血小
+ 板低下(非ITP)對Romiplostim反應之病因相關差異：六例病例
+ 系列報告\n張從彥¹、溫玉娟²、王奕倫、蕭翌雯、陳世
+ 翔、江東和\n林口長庚紀念醫院；兒童血液腫瘤科、護理
+ 部²\n15:02~15:20\n討論\n15:20~15:30\n休息
+DTSTART;TZID=Asia/Taipei:20261107T090000
+DTEND;TZID=Asia/Taipei:20261108T162000
+END:VEVENT
+BEGIN:VEVENT
+UID:74b6b480-c8a8-5fad-a662-b1546ee7e11c
+DTSTAMP:20261021T150104Z
+SUMMARY:Taiwan HSCT & Cell Therapy Congress 2026
+LOCATION:張榮發國際會議中心8F
+DESCRIPTION:Taiwan HSCT & Cell Therapy Congress 2026\n主辦單位：中華
+ 民國血液及骨髓移植學會\n分類：丙類\n積分：6\n學會頁
+ 面：https://www.hematology.org.tw/web2/project/index.php?act=point&id=30
+ 30\n\n--- 報名/節目表 ---\nUnraveling the multifacets of GvHD: from p
+ athogenesis to therapeutics\nDay 1: Saturday\, November 14\, 2026\nTime\nR
+ oom 801\nRoom 803\nTime\nTopic\nSpeaker\nModerator\nTopic\nSpeaker\nModera
+ tor\n09:00-09:50\nSatellite Symposium (1) Amgen\nDebate: Transplant vs. No
+  Transplant in B-ALL: Who\, When\, and Why?\nDr. Hsin-An Hou / President\,
+  HST\nvs\nDr. Su-Peng Yeh / President\, TBMT\nDr. Yeu-Chin Chen / Tri-Serv
+ ice General Hospital\n&\nDr. Su-Peng Yeh / President\, TBMT\nNursing sessi
+ on (1)\nFrom Recovery to Work Participation After Allogeneic Stem Cell Tra
+ nsplantation: Understanding a Complex Survivorship Transition\nAssoc. Prof
+ . Karine Bilodeau / Université de Montréal\nMs. Jui-Yi Chen / Director\,
+  TBMT\n&\nMs. Meng Kuan Chiang / Deputy Secretary-General\, TBMT\n09:50-10
+ :00\nOpening / Please proceed to Room 801\n10:00-11:00\nKeynote Speech (1)
+ \nLung GvHD\nDr. Guang Ching Cheng / Fred Hutch Cancer Center\nDr. Su-Peng
+  Yeh / President\, TBMT\nNursing session (2)\nNursing Care for Acute and C
+ hronic Graft-versus-Host Disease: From Early Recognition to Long-Term Func
+ tional Recovery\nAssoc. Prof. Hana Kiyohara / College of Nursing Art and S
+ cience University of Hyogo\nMs. Jui-Yi Chen / Director\, TBMT\n&\nMs. Meng
+  Kuan Chiang / Deputy Secretary-General\, TBMT\n11:00-11:10\nBreak / Pleas
+ e proceed to Room 801\n11:10-12:10\nMain session (1)\nImmunomodulatory pro
+ perties of human mesenchymal stem/stromal cells (hMSCs) for therapeutic us
+ e: one source does not fit all\nDr. Lin Ju Yen / National Health Research 
+ Institutes\nDr. Po-Shen Ko / Taipei Veterans General Hospital\nDr. Su-Peng
+  Yeh / President\, TBMT\nDr. Yin-Hsun Feng / Chi Mei Medical Center\n12:10
+ -13:00\nLunch Symposium (1) MSD\nCMV Management Pathways: Integrating Vira
+ l Monitoring\, Immune Assessment and Prophylaxis\nDr. Kate Markey / Fred H
+ utch\nDr. Hsin-An Hou / President\, HST\nLunch Symposium (2) Kirin\nTreatm
+ ent Strategies in Advanced CTCL: Where Does Mogamulizumab Fit\nProf. Takat
+ oshi Shimauchi / Hamamatsu University Hospital\nDr. Tai-Chung Huang / Nati
+ onal Taiwan University Hospital\n13:00-14:00\nKeynote Speech (2)\nThe Gut 
+ Microbiome After Allogeneic HCT: Shaping Immune Reconstitution\, GVHD\, In
+ fection\, and Relapse\nProf. Takanori Teshima (TBD)\nDr. Su-Peng Yeh / Pre
+ sident\, TBMT\n14:00-14:50\nMain session (2)\nMicrobiota and Fecal Microbi
+ ota Transplantation in Hematology: Focus on Steroid-Refractory Acute Gastr
+ ointestinal Graft-Versus-Host Disease\nDr. Hsiao-Wen Kao & Dr. Tung-Liang 
+ Lin / Linkou Chang Gung Memorial Hospital\nLinkou Chang Gung Memorial Hosp
+ ital\nPlease proceed to Room 801\n15:00-15:10\nBreak\n15:10-15:50\nMain se
+ ssion (3)\nOcular Graft-Versus-Host Disease: From Pathophysiology to Multi
+ disciplinary Management\nDr. Wei-Lun Huang / National Taiwan University Ho
+ spital Hsin-Chu Branch\nDr. Ming Yao / National Taiwan University Hospital
+ \nPlease proceed to Room 801\n15:50-16:30\nMain session (4)\nLocal GVHD-Sk
+ in\nDr. Wei-Hsin Wu / National Taiwan University Hospital\nDr. Liang-Tsai 
+ Hsiao / Taipei Veterans General Hospital\nEnd of Day 1\n16:30-17:10\nMain 
+ session (5)\nNovel insight into GVHD target tissue injury\nDr. Chi-Cheng L
+ i / Hualien Tzu Chi Hospital\n&\nProf. Takanori Teshima / Hokkaido Univers
+ ity\nDay 2: Sunday\, November 15\, 2026\nTime\nRoom 801\nRoom 803\nTime\nT
+ opic\nSpeaker\nModerator\nTopic\nSpeaker\nModerator\n08:10-09:00\nSatellit
+ e Symposium (2) Takeda\nTBD\nDr. Cheng-Hong Tsai / National Taiwan Univers
+ ity Hospital\nSatellite Symposium (3) Gilead\nRedefining Second-Line Treat
+ ment: Timely Axi-cel Intervention for Early Relapsed or Refractory DLBCL\n
+ Dr. Sze-Hwei Lee / National Taiwan University Hospital\nDr. Chia-Jen Liu /
+  Taipei Veterans General Hospital\n09:00-09:30\nWhat's New Series (1)\nDon
+ or Selection\nDr. Yi-Chang Liu / Kaohsiung Medical University Chung-Ho Mem
+ orial Hospital\nDr. Shyh-Shin Chiou / Kaohsiung Medical University Hospita
+ l\nPlease proceed to Room 801\n09:30-10:00\nWhat's New Series (2)\nWhat's 
+ New in Graft Engineering: From T-Cell Depletion to Precision Cellular Graf
+ ts\nDr. Tzu-Ting Chen / China Medical University Hospital\nDr. Yuan-Bin Yu
+  / Far Eastern Memorial Hospital\n10:00-10:10\nBreak\n10:10-10:50\nWhat's 
+ New Series (3)\nHSCT-Cell Therapy in Myeloma\nProf. SungSoo-Park / The Cat
+ holic University of Korea\nDr. Nack-Gyun Chung / President\, KSBMT\nScient
+ ific session (5\, 7)\nFrom Prevention to Rescue: Pediatric Haploidentical 
+ PBSCT GvHD Strategies from a Decade of Experience (10:10-11:10)\nBeyond Cu
+ re: Fertility Preservation Pathways for Pediatric Patients Undergoing Chem
+ otherapy and HSCT (11:10-12:10)\nDr. Te Fu Weng / Chung Shan Medical Unive
+ rsity Hospital\nDr. Ya-Wen Hsueh / China Medical University Hospital\nDr. 
+ Kang-His Wu / Chung Shan Medical University Hospital\nDr. Meng-Yao Lu / Na
+ tional Taiwan University Hospital\n10:50-11:30\nWhat's New Series (4)\nHSC
+ T-Cell Therapy in Lymphoma\nDr. Lawrence Ng Cheng Kiat / Singapore General
+  Hospital\nDr. Chieh-Lin Teng / Taichung Veterans General Hospital\n11:30-
+ 12:10\nWhat's New Series (5)\nHSCT-Cell Therapy in AML\nDr. Cheng-Hong Tsa
+ i / National Taiwan University Hospital\nDr. Tran-Der Tan / Koo Foundation
+  Sun Yat-Sen Cancer Center\n12:10-13:00\nLunch Symposium (3) Meiji\nAdvanc
+ ing late-line belumosudil for treating patients with chronic GVHD: from ev
+ idence to practice in Korea\nProf. Hee-Je Kim / The Catholic University of
+  Korea\nDr. Sin-Syue Li / National Cheng Kung University Hospital\nLunch S
+ ymposium (4) Novartis\nOptimizing Kymriah Success in Third-Line DLBCL: Ins
+ ights from Real-World Practice and Early Apheresis Strategies\nDr. Shih-Fe
+ ng Cho / Kaohsiung Medical University Chung-Ho Memorial Hospital\nDr. Hung
+  Chang / Linkou Chang Gung Memorial Hospital\n13:00-14:00\nSpecial session
+  (2): General Hospital Debate:\nIs HSCT Necessary for AYA VS Patients with
+  Ph+ ALL?\nDr. Pei-Chin Lin / Kaohsiung Medical University Hospital\n&\nDr
+ . Ting-An Lin / Taipei Veterans General Hospital\nDr. Bor-Sheng Ko / Natio
+ nal Taiwan University Cancer Center\nPlease proceed to Room 801\n14:00-14:
+ 10\nClosing
+DTSTART;TZID=Asia/Taipei:20261114T090000
+DTEND;TZID=Asia/Taipei:20261115T140000
+END:VEVENT
+BEGIN:VEVENT
 UID:7c0af37b-cae1-5db0-b661-7baf7a988946
-DTSTAMP:20260921T000056Z
+DTSTAMP:20261021T150104Z
 SUMMARY:HST-TBMT冬季會
 LOCATION:嘉義長庚紀念醫院
 DESCRIPTION:主辦單位：HST、TBMT、嘉長\n分類：甲類\n積分：5
@@ -145,7 +278,7 @@ DTEND;TZID=Asia/Taipei:20261205T180000
 END:VEVENT
 BEGIN:VEVENT
 UID:330495d4-8439-5685-92d7-05b6f416f6e4
-DTSTAMP:20260921T000056Z
+DTSTAMP:20261021T150104Z
 SUMMARY:第2天：SOHO Asia 2027
 LOCATION:台北國際會議中心(TICC)
 DESCRIPTION:主辦單位：HST、SOHO\n分類：甲類\n積分：6\n學會
@@ -166,7 +299,7 @@ DTEND;TZID=Asia/Taipei:20270109T180000
 END:VEVENT
 BEGIN:VEVENT
 UID:5a76f0e8-b192-505d-bd25-70ce6d184609
-DTSTAMP:20260921T000056Z
+DTSTAMP:20261021T150104Z
 SUMMARY:第3天：SOHO Asia 2027
 LOCATION:台北國際會議中心(TICC)
 DESCRIPTION:主辦單位：HST、SOHO\n分類：甲類\n積分：6\n學會
@@ -187,7 +320,7 @@ DTEND;TZID=Asia/Taipei:20270110T181500
 END:VEVENT
 BEGIN:VEVENT
 UID:326a8e06-1ced-5ddd-b87e-2f4b74758408
-DTSTAMP:20260921T000056Z
+DTSTAMP:20261021T150104Z
 SUMMARY:HST-TBMT年會
 DESCRIPTION:主辦單位：HST、TBMT\n分類：甲類\n積分：15\n學會
  頁面：https://www.hematology.org.tw/web2/project/index.php?act=point&id
@@ -222,7 +355,7 @@ DTEND;VALUE=DATE:20270426
 END:VEVENT
 BEGIN:VEVENT
 UID:ac1214a0-6022-5586-bc38-ce91418fe867
-DTSTAMP:20260921T000056Z
+DTSTAMP:20261021T150104Z
 SUMMARY:HST-TBMT秋季會
 LOCATION:成大
 DESCRIPTION:主辦單位：HST、TBMT、成大\n分類：甲類\n積分：5
@@ -261,7 +394,7 @@ DTEND;TZID=Asia/Taipei:20270925T180000
 END:VEVENT
 BEGIN:VEVENT
 UID:fbf167bf-b0c0-576f-87e2-13d16c263934
-DTSTAMP:20260921T000056Z
+DTSTAMP:20261021T150104Z
 SUMMARY:HST-TBMT冬季會
 LOCATION:中山附醫
 DESCRIPTION:主辦單位：HST、TBMT、中山附醫\n分類：甲類\n積
