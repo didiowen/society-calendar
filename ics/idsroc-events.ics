@@ -15,27 +15,16 @@ TZNAME:CST
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:05ac7eb2-5381-538c-b20a-a7328c2d5906
-DTSTAMP:20260921T000028Z
-SUMMARY:第二十八屆台灣抗微生物製劑抗藥性現況研討會
-LOCATION:台北凱薩大飯店4F寶島廳
-DESCRIPTION:主辦單位：感染症醫學會\n類別：A類\n積分：6分
- \n費用：收費\n學會頁面：https://www.idsroc.org.tw/active/side_in
- fo.asp?id=18780&side=in\n課程表：https://www.idsroc.org.tw/DB/Edu/1878
- 0.pdf?v=20269218018\n聯絡人：岳薇 ([email&#160\;protected])
-DTSTART;TZID=Asia/Taipei:20261003T090500
-DTEND;TZID=Asia/Taipei:20261003T152000
-END:VEVENT
-BEGIN:VEVENT
 UID:fe6461ea-3e51-57f6-9dd1-d1975cc9bbf0
-DTSTAMP:20260921T000028Z
+DTSTAMP:20261021T150036Z
 SUMMARY:第38屆世界內科醫學會(World Congress of Internal Medicine\,
  WCIM)
 LOCATION:南港展覽館二館7樓
 DESCRIPTION:主辦單位：台灣內科醫學會\n類別：B類\n積分：4
  分\n費用：不收費\n學會頁面：https://www.idsroc.org.tw/active/s
  ide_info.asp?id=18679&side=in\n課程表：https://www.idsroc.org.tw/DB/Ed
- u/18679.pdf?v=2026921808\n聯絡人：黃宇彤 ([email&#160\;protected])
+ u/18679.pdf?v=2026102123017\n聯絡人：黃宇彤 ([email&#160\;protected
+ ])
 DTSTART;TZID=Asia/Taipei:20261112T080000
 DTEND;TZID=Asia/Taipei:20261115T170000
 END:VEVENT
