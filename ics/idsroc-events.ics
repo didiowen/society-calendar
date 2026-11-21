@@ -15,17 +15,18 @@ TZNAME:CST
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:fe6461ea-3e51-57f6-9dd1-d1975cc9bbf0
-DTSTAMP:20261021T150036Z
-SUMMARY:第38屆世界內科醫學會(World Congress of Internal Medicine\,
- WCIM)
-LOCATION:南港展覽館二館7樓
-DESCRIPTION:主辦單位：台灣內科醫學會\n類別：B類\n積分：4
- 分\n費用：不收費\n學會頁面：https://www.idsroc.org.tw/active/s
- ide_info.asp?id=18679&side=in\n課程表：https://www.idsroc.org.tw/DB/Ed
- u/18679.pdf?v=2026102123017\n聯絡人：黃宇彤 ([email&#160\;protected
- ])
-DTSTART;TZID=Asia/Taipei:20261112T080000
-DTEND;TZID=Asia/Taipei:20261115T170000
+UID:b1360efe-4acc-5cf4-911c-9ee0468ece5f
+DTSTAMP:20261121T160018Z
+SUMMARY:醫療機構感染管制師甄試基礎班課程研習會【南區
+ 】
+LOCATION:國軍高雄總醫院 軍陣醫療大樓四樓會議室 (高雄市
+ 苓雅區中正一路2號)
+DESCRIPTION:主辦單位：社團法人台灣感染管制學會\n類別：B
+ 類\n積分：6分\n費用：收費\n學會頁面：https://www.idsroc.org
+ .tw/active/side_info.asp?id=18831&side=in\n課程表：https://www.idsroc.
+ org.tw/DB/Edu/18831.pdf?v=202611220017\n聯絡人：王媛溱 ([email&#160
+ \;protected])
+DTSTART;TZID=Asia/Taipei:20261123T083000
+DTEND;TZID=Asia/Taipei:20261125T161000
 END:VEVENT
 END:VCALENDAR
